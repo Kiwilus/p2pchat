@@ -38,21 +38,22 @@ rand = "0.8.5"
 serde = { version = "1.0.217", features = ["derive"] }
 serde_json = "1.0.137"
 tokio = "1.43.0"
-
----
+```
 
 🔗 How P2P Connection Works
 
 1. **Open a Chat Room**
+```bash
 cargo run -- open
-
+```
 This command creates a new chat room and generates a ticket.
 Share this ticket with your friends so they can join the same room.
 Your terminal will display a TopicId and a ticket string.
 
 2. **Join a Chat Room**
+```bash
 cargo run -- join <ticket>
-
+```
 Replace <ticket> with the ticket received from the room opener.
 Connects your client to the existing chat room using encrypted P2P communication.
 Once connected, you can send and receive messages directly with other peers.
