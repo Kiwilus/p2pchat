@@ -27,6 +27,7 @@ It is **completely free and open-source**.
 
 ## 📖 Dependencies
 
+```toml
 anyhow = "1.0.95"
 clap = { version = "4.5.27", features = ["derive"] }
 data-encoding = "2.7.0"
@@ -36,13 +37,14 @@ iroh-gossip = "0.31.0"
 rand = "0.8.5"
 serde = { version = "1.0.217", features = ["derive"] }
 serde_json = "1.0.137"
-tokio = "1.43.0" 
+tokio = "1.43.0"
 
 ---
 
 ## 🔗 How P2P Connection Works
 
-1. **Open a chat room**  
+1. **Open a chat room**
+
    cargo run -- open
 
    This command creates a new chat room and generates a ticket.
@@ -50,6 +52,7 @@ tokio = "1.43.0"
    Your terminal will display a TopicId and a ticket string.
 
 2. **Join a chat room**
+
    cargo run -- join <ticket>
 
    Replace <ticket> with the ticket received from the room opener.
@@ -57,5 +60,6 @@ tokio = "1.43.0"
    Once connected, you can send and receive messages directly with other peers.
 
 3. **Send Messages**
+
    Type your message in the terminal and press Enter to broadcast it to all connected peers.
    All messages are encrypted and transmitted peer-to-peer without a central server.
