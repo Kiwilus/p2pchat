@@ -40,7 +40,7 @@ serde_json = "1.0.137"
 tokio = "1.43.0"
 ```
 
-🔗 How P2P Connection Works
+## 🔗 How P2P Connection Works
 
 1. **Open a Chat Room**
 ```bash
